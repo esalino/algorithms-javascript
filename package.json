@@ -1,0 +1,16 @@
+{
+  "name": "algorithms-javascript",
+  "version": "1.0.0",
+  "description": "Algorithms in javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Erik Salino",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+	"jest": "^26.6.1"
+  }
+}
