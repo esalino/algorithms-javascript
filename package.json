@@ -9,8 +9,10 @@
   "author": "Erik Salino",
   "license": "MIT",
   "dependencies": {
+    "line-reader": "^0.4.0",
+    "n-readlines": "^1.0.1"
   },
   "devDependencies": {
-	"jest": "^26.6.1"
+    "jest": "^26.6.1"
   }
 }
