@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-20.04
     name: 'Run unit tests'
     steps:
-      -name: Checkout PR
+      - name: Checkout PR
         uses: actions/checkout@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
