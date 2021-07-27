@@ -18,3 +18,16 @@ jobs:
 
       - name: Test
         run: echo ${{ secrets.TEST_SECRET }}
+  lint:
+    runs-on: ubuntu-20.04
+    name: 'Run lint'
+    if: "(github.event_name == 'pull_request_target' && github.actor == 'dependabot[bot]') || (github.event_name != 'pull_request_target' && github.actor != 'dependabot[bot]')"
+    steps:
+      - name: Checkout PR
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Test Lint
+        run: echo ${{ secrets.TEST_SECRET }}
