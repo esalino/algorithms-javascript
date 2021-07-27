@@ -14,4 +14,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Test
-      run: echo ${{ secrets.TEST_SECRET }}
+        run: echo ${{ secrets.TEST_SECRET }}
