@@ -8,6 +8,7 @@ jobs:
   unit_tests:
     runs-on: ubuntu-20.04
     name: 'Run unit tests'
+    if: "(github.event_name == 'pull_request_target' && github.actor == 'dependabot[bot]') || (github.event_name != 'pull_request_target' && github.actor != 'dependabot[bot]')"
     steps:
       - name: Checkout PR
         uses: actions/checkout@v2
