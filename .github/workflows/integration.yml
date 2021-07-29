@@ -1,0 +1,23 @@
+name: Microservice Template Continuous Integration
+
+on:
+  pull_request:
+  pull_request_target:
+
+jobs:
+  integration:
+    runs-on: ubuntu-20.04
+    name: 'Run integration'
+    if: >-
+      (github.event_name == 'pull_request_target' && github.actor == 'dependabot[bot]')
+      ||
+      (github.event_name != 'pull_request_target' && github.actor != 'dependabot[bot]')
+    steps:
+      - name: Checkout PR
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Test Integration
+        run: echo ${{ secrets.TEST_SECRET }}
