@@ -4,7 +4,7 @@ on:
   pull_request:
   pull_request_target:
     branches:
-      - 'dependabot/*'
+      - 'dependabot/**'
 
 jobs:
   lint:
