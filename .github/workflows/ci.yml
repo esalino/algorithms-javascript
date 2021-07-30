@@ -3,6 +3,9 @@ name: Microservice Template Continuous Integration
 on:
   workflow_run:
     workflows: ["PR Actions Gate"]
+    types:
+      - completed
+      - requested
 
 jobs:
   lint:
