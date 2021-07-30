@@ -24,6 +24,7 @@ function minimumBribes(q) {
         q[j + 1] = t;
     }
     return numSwaps;
+    
 }
 
 module.exports = minimumBribes;
