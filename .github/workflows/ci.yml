@@ -11,12 +11,12 @@ jobs:
   lint:
     runs-on: ubuntu-20.04
     name: 'Check for Linting Issues'
+    if: >
+      ${{ github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: Checkout PR
         uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Test Lint
         run: echo ${{ secrets.TEST_SECRET }}
