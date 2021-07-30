@@ -16,9 +16,6 @@ jobs:
     steps:
       - name: Checkout PR
         uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Test Lint
         run: echo ${{ secrets.TEST_SECRET }}
@@ -31,9 +28,6 @@ jobs:
     steps:
       - name: Checkout PR
         uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Test
         run: echo ${{ secrets.TEST_SECRET }}
@@ -46,9 +40,6 @@ jobs:
     steps:
       - name: Checkout PR
         uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Test Integration
         run: echo ${{ secrets.TEST_SECRET }}
