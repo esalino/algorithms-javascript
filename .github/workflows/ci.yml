@@ -4,8 +4,6 @@ on:
   workflow_run:
     workflows: ["PR Actions Gate"]
     types: [completed]
-    branches:
-      - '!main'
 
 jobs:
   lint:
