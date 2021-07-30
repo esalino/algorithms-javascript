@@ -9,7 +9,7 @@ on:
 jobs:
   lint:
     runs-on: ubuntu-20.04
-    name: 'Check for Linting Issues'
+    name: 'Run lint'
     steps:
       - name: Checkout PR
         uses: actions/checkout@v2
