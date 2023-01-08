@@ -9,6 +9,7 @@
   "author": "Erik Salino",
   "license": "MIT",
   "dependencies": {
+    "datastructures-js": "^12.0.0",
     "line-reader": "^0.4.0",
     "n-readlines": "^1.0.1"
   },
